@@ -15,3 +15,18 @@ int add_no_arithm(int a, int b)
 
 	return add_no_arithm(sum, carry);          //递归计算和
 }
+
+
+//写一个接受可变参数的函数实现多个数相加
+
+int add(int num,...)
+{
+	int sum=0;
+	int index=0;
+	int*p=(int*)&num+1;                          //获取形参地址方式
+	for(;index<num;index++)
+		sum+=*p++;
+	return sum;
+}
+
+//或者initializer_list
