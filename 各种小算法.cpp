@@ -30,3 +30,14 @@ int add(int num,...)
 }
 
 //或者initializer_list
+
+
+//求最大公约数
+
+int func(int m,int n)
+{
+	if(m%n==0)
+		return n;
+	else
+		return func(n,m%n);
+}
